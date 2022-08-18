@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cuprum&family=Sanchez&display=swap');
+
+/*---------------------------------Fondos------------------------------*/
+.fondos{
+    
+    background-image: url(../img/DT_fondo.png);
+    
+    background-repeat: no-repeat;
+    
+    background-position: center center ;
+    background-attachment: fixed;
+    margin: 0;
+}
+/*.ftransparente{
+
+    background-color: rgba(255, 255, 255, 0.5);
+   height: 100vh; viewport high alto de a vista
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center ;
+   background-attachment: fixed;
+   margin: 0;
+}*/
+
+.fondoCeleste{
+    background-color: #A9DCD7;
+}
+
+
+/*---------------------------------Fuentes------------------------------*/
+
+.sanchez{
+    font-family: 'Sanchez', serif;
+}
+
+.bebas{
+    font-family: 'Bebas Neue', cursive;  
+}
+
+.cuprum{
+    font-family: 'Cuprum', sans-serif;
+}
+
+.puntero{
+    cursor: pointer;
+}
+
+
+
+/*---------------------------------Bordes------------------------------*/
+
+
+.sinBorde{
+    border-color: transparent;
+}
+
+.bordesAzul{
+    border-color: #015989 !important;
+}
+
+.bordRedo{
+    border-radius: 25px;
+}
+
+.bordePerfil{
+    border-radius: 50px;
+    border-color: black;
+}
+
+
+
+/*---------------------------------Posiciones------------------------------*/
+
+.centerx{
+    display: flex;
+    justify-content: center;
+}
+
+.centery{
+    display: flex;
+    align-items: center;
+
+}
+
+.columnas{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+
+/*---------------------------------Colores de fuente------------------------------*/
+
+.fuenteBlanco{
+    color: white;
+}
+
+.fuenteNegro{
+    color: black;
+}
+
+.fuenteAzul{
+    color: #2A5774;
+}
+
+.fuenteGris{
+    color: #949494;
+}
+/*---------------------------------Estilos por id------------------------------*/
+
+#formularioIS{
+    background-color: transparent;
+    color: #000000;
+    width: 500px;
+    border-color: transparent;
+    padding: 30px 38px 30px 38px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo{
+    width: 100px;
+    height: 100px;
+}
+
+#btnAcceder{
+    background-color:#009DC8;
+    color: aliceblue;
+    margin-top: 30px;
+    cursor:pointer;
+    width: auto;
+    border-radius:40px;
+    padding: 10px 40px;
+    font-size: 23px !important;
+}
+
+#btnAcceder:hover{
+    background-color: #005dc8;
+    text-decoration: underline;
+}
+
+
+#lineaV{
+    background-color: black;
+    height: 105%;
+    margin-left: -4px;
+}
+
+#cLineaV{
+    padding: 8px 12px;
+}
+
+#logoSuperior{
+    width: 250px; 
+ }
+
+ /*---------------------------------Estilos por otras clases------------------------------*/
+
+ .imp{
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size:  20px;
+    margin-bottom: 10px;
+    border-color: #000000 !important;
+    border-radius: 30px;
+    background-color: #ffffff;
+    display: flex;
+}
+
+.anchoImp{
+    width: 400px;
+}
+
+.impForm{
+    padding: 10px;
+    box-sizing: border-box;
+    font-size:  15px;
+    margin-bottom: 10px;
+    border-color: #000000 !important;
+    border-radius: 30px;
+    background-color: #ffffff;
+}
+
+.selectLista{
+    padding: 10px;
+    box-sizing: border-box;
+    font-size:  15px;
+    margin-bottom: 10px;
+    border-color: #000000 !important;
+    background-color: #ffffff;
+    display: flex;
+}
+
+.tamañoSelectList{
+    width: 600px;
+    height: 200px
+}
+
+
+ /*---------------------------------------@media--------------------------------------------*/
+ @media (max-width: 575.98px) {
+
+    #formularioIS{
+        
+        width: 80%;
+        height: auto;
+        padding:5px 18px;
+        margin-top: 55px;
+        
+    } 
+
+    .anchoImp{
+        width: 100%;
+    }
+
+    #logo{
+        padding:10px 20px;
+        
+    }
+
+    #logoSuperior{
+    width: 225px;
+        
+    }
+
+    
+
+    .ic{
+        font-size: 1.2em !important;
+    }
+
+    .ic2{
+        font-size: 1.5em !important;
+    }
+
+    .ic3{
+        font-size: 2em !important;
+        padding: 4px !important;
+    }
+
+    
+
+    .cardEstilos{
+        font-size: 25px;
+        padding: 0px 80px;
+    }
+    
+
+    #contenido{
+        height: auto;
+        background-color: black;
+        
+    }
+    #tp{
+        display: none;
+    }
+
+    #barraLat{
+        height: 100vh;
+    }
+
+    .fuentePeque{
+        font-size: 14px;
+    }
+
+    .fuenteGran{
+        font-size: 20px;
+    }
+
+    #fact2{
+       font-size: 15px !important;
+    }
+ }

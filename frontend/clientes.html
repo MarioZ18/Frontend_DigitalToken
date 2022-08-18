@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" href="img/favicon.png ">
+    <title>Administrador</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/051307d18d.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body id="fondo" class="fondos">
+  <nav id="nv" class="navbar navbar-expand-lg bg-light">
+    
+  </nav>
+    <div id="clientes" class="centerx ftransparente mx-4">
+
+      <div class="container-fluid">
+        <div class="row centerx mt-4">
+            <div class="col-12 col-md-6">
+              <div id="listaClientes">
+        
+                    <div id="generarListClientes">
+                        <h3 id="titulolistaClientes"></h3>
+                        <form>
+                            <input class="impForm anchoImp sanchez" id="nombBib" type="text" placeholder="Buscar Biblioteca">
+                            <button  class="btn cuprum fondoCeleste bordesAzul bordesRedo m-2 shadow" type="button" onclick="generarBibliotecas();">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+
+            
+                        </form>
+            
+                        <select id="cliList" class="form-select selectLista tamañoSelectList sanchez" size="3" aria-label="size 10 select example">
+                            <option selected> </option>
+                            
+                        </select>
+            
+                        <button  class="btn cuprum fondoCeleste bordesAzul bordesRedo m-2 shadow" type="button" onclick="detallesCli();">
+                            Ver Detalles
+                        </button>
+
+                        <button  class="btn cuprum fondoCeleste bordesAzul bordesRedo m-2 shadow" type="button" onclick="formCli('A');">
+                            Añadir Cliente
+                        </button>
+            
+                        <button  id="btnEliminarCli" class="btn cuprum fondoCeleste bordesAzul bordesRedo m-2 shadow" type="button" onclick="eliminarCli();">
+                            Eliminar
+                        </button>
+                
+                
+            
+                        
+                    </div>
+                </div>
+                <br>
+                
+            </div>
+
+        
+            <div class="col-12 col-md-6">
+                <div id="accionesClientes">
+
+                  <div id="datosClientes">
+                    <div class="container mt-5">
+                        <div class="col-12 ">
+                            <div class="card bordes25 mb-4 mx-3 shadow fondoGris center " >  
+                                <div class=" row center">                     
+                                    <div id="logoCli" class="col-4 center centery">
+                                        
+                                    </div>
+                                    <div id="datosCli" class="col-7 centery cuprum py-2 fuenteOD" >
+                                        
+                                    </div>
+                                </div>  
+                            </div>
+                            <div id="btnVerDetallesCli" class="mx-3">
+
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    
+                </div> 
+
+                <div id="formularioClientes">    
+                    
+                    <h3 id="tituloFormCli"></h3>
+                      <div id="formCli">
+                            <div>
+                                ID del Cliente:
+                                <br>
+                                <input class="impForm anchoImp sanchez" id="idCli" type="text">
+                            </div>
+                           <div>
+                                Nombre:
+                                <br>
+                                <input class="impForm anchoImp sanchez" id="nombreCli" type="text">
+                          </div>
+                            <div>
+                                Apellidos:
+                                <br>
+                                <input class="impForm anchoImp sanchez" id="apellidoCli" type="text">
+                            </div>
+                          <div>
+                                Membresía:
+                                <br>
+                                <select id="membCli" class="impForm anchoImp sanchez form-select">
+                                    <option selected disabled> </option>
+                                    <option value="1">Antigua</option>
+                                    <option value="2">Clásica</option>
+                                    <option value="3">Moderna</option>
+                                    
+                                </select>
+                          </div>
+                          <div>
+                              Numero de Telefono:
+                              <br>
+                              <input class="impForm anchoImp sanchez" id="telefCli" type="number" min=1 >
+          
+                          </div>
+                          <div>
+                              Correo Electrónico:
+                              <br>
+                              <input class="impForm anchoImp sanchez" id="correoCli" type="text">
+          
+                          </div>
+                          <div>
+                              Dirección:
+                              <br>
+                              <input class="impForm anchoImp sanchez" id="direcCli" type="text" min=1 >
+          
+                          </div>
+                          <div>
+                              Foto:
+                              <input class="impForm anchoImp sanchez" id="fotoCli" type="text">
+          
+                          </div>
+                          <div id="btnEmEdForm" class="centerx">
+                            <button  class="btn cuprum fondoCeleste bordesAzul bordesRedo m-2 shadow" type="button" onclick="generarListCli();">
+                              Cancelar
+                          </button>
+                          <button class="btn cuprum fondoCeleste bordesAzul bordesRedo m-2 shadow" type="button" onclick="guardarBib();">
+                              Guardar
+                          </button>
+                          </div>
+                              
+                      </div>
+                  </div>
+                  
+              </div> 
+            </div>
+   
+        </div>
+    </div>
+      
+
+
+          
+          
+    
+        
+    </div>
+
+    <script src="js/controlador.js"></script>
+    <script src="js/clientes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
